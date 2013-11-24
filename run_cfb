@@ -1,0 +1,8 @@
+#!/bin/bash
+
+echo Parsing Stats for Week $1:
+echo =========================================
+echo Starting Parse... && ./cfb_parse.py $1 && echo Done
+echo Starting Logistic Rank... && ./logistic_rank.py $1 && echo Done
+echo =========================================
+echo Done

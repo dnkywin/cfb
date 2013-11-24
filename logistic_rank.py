@@ -1,5 +1,9 @@
+#!/usr/bin/python
 import math
-WEEKNUM = 13
+import sys
+
+WEEKNUM = int(sys.argv[1])
+METHOD = 'logistic'
 
 name_inp = open("team.csv","r")
 name_data = name_inp.read()
@@ -85,7 +89,7 @@ while not stable:
 
 ranks = sorted([(power[i],i) for i in wins if len(wins[i])+len(loss[i])>4])
 
-outp = open("cfb_rank_week%s.txt"%(WEEKNUM,),"w")
+outp = open("%s_rank_week%s.txt"%(METHOD, WEEKNUM),"w")
 for i,j in enumerate(reversed(ranks)):
     outp.write("%s. %s (%s-%s)\n" % (i+1, names[j[1]],len(wins[j[1]]), len(loss[j[1]])))#, int(1200+400*math.log(j[0]/MU)/math.log(2))))
 
