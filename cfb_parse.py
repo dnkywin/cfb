@@ -1,5 +1,5 @@
 import math
-WEEKNUM = 12
+WEEKNUM = 13
 
 name_inp = open("team.csv","r")
 name_data = name_inp.read()
