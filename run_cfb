@@ -2,7 +2,8 @@
 
 echo Parsing Stats for Week $1:
 echo =========================================
-echo Starting Parse... && scripts/cfb_parse.py $1 && echo Done
-echo Starting Logistic Rank... && scripts/logistic_rank.py $1 && echo Done
+echo Starting Parse... && scripts/cfb_parse.py $1 && echo Done && {
+    echo Starting Logistic Rank... && scripts/logistic_rank.py $1 && echo Done;
+}
 echo =========================================
 echo Done
