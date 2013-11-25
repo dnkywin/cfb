@@ -1,5 +1,9 @@
 College Football Ranking System
 
-Currently - Logistic Rank
+To run, type in ./run_cfb WEEKNUM in the command line in the master directory. 
+
+Currently has data for weeks 10-13 of the 2013 Football Season
+
+Currently Implemented- Logistic Rank
 
 Stats from cfbstats.com
