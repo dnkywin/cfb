@@ -1,6 +1,7 @@
 #!/usr/bin/python
 import math
-from parsed_game_reader import games, wins, loss
+from parsed_game_reader import games, wins, loss, WEEKNUM
+from team_reader import names, IDs
 
 METHOD = 'logistic'
 
