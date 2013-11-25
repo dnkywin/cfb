@@ -89,7 +89,7 @@ while not stable:
 
 ranks = sorted([(power[i],i) for i in wins if len(wins[i])+len(loss[i])>4])
 
-outp = open("%s_rank_week%s.txt"%(METHOD, WEEKNUM),"w")
+outp = open("ranks/logistic/%s_rank_week%s.txt"%(METHOD, WEEKNUM),"w")
 for i,j in enumerate(reversed(ranks)):
     outp.write("%s. %s (%s-%s)\n" % (i+1, names[j[1]],len(wins[j[1]]), len(loss[j[1]])))#, int(1200+400*math.log(j[0]/MU)/math.log(2))))
 
