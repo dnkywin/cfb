@@ -1,7 +1,6 @@
 import sys
 
 WEEKNUM = int(sys.argv[1])
-METHOD = 'logistic'
 
 name_inp = open("data/team.csv","r")
 name_data = name_inp.read()

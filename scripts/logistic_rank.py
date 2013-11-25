@@ -1,6 +1,8 @@
 #!/usr/bin/python
 import math
-from parsed_game_reader import *
+from parsed_game_reader import games, wins, loss
+
+METHOD = 'logistic'
 
 power = {}
 
