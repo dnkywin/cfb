@@ -20,15 +20,15 @@ while not stable:
         numloss = len(loss[team])*1.0
         numplayed = len(loss[team])*1.0+len(wins[team])
         lo = 0
-        hi = MU*1000000.0
-        while(hi-lo>0.0000001):
+        hi = MU*1000.0
+        while(hi-lo>0.0001):
             mid = (hi+lo)/2
             if sum([1/(mid/i+1.0) for i in played]) + 2.0/(mid/MU+1.0) > numloss+1.0:
                 lo = mid
             else:
                 hi = mid
         newpower[team] = lo
-        if (abs(newpower[team]-power[team])>0.000001):
+        if (abs(newpower[team]-power[team])>0.001):
             stable = False
 
     power = newpower
