@@ -5,7 +5,7 @@ import sys
 WEEKNUM = int(sys.argv[1])
 METHOD = 'logistic'
 
-name_inp = open("team.csv","r")
+name_inp = open("data/team.csv","r")
 name_data = name_inp.read()
 name_inp.close()
 
@@ -23,7 +23,7 @@ games = {}
 wins = {}
 loss = {}
 
-inp = open("games-parsed-week%s.txt"%(WEEKNUM,), "r")
+inp = open("data/games-parsed-week%s.txt"%(WEEKNUM,), "r")
 gamedata = inp.read()
 inp.close()
 
