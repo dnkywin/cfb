@@ -41,3 +41,4 @@ if remove_fcs:
             for t in loss[team]:
                 wins[t].remove(team)
             del wins[team],loss[team]
+    
