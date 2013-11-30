@@ -8,7 +8,7 @@ METHOD = 'naive_SOS'
 power = {}
 
 for team in wins:
-    power[team] = len(wins[team])*1.0 / (len(wins[team])+len(loss[team]))
+    power[team] = (len(wins[team]) + 1.0) / (len(wins[team])+len(loss[team]) + 2.0)
 
 stable = False
 tol = 0.00001
@@ -16,12 +16,12 @@ while not stable:
     newpower = {}
     stable = True
     for team in power:
-        newpower[team] = len(wins[team])*1.0
+        newpower[team] = len(wins[team])*1.0 + 2.0
         for other in wins[team]:
             newpower[team] += power[other]
         for other in loss[team]:
             newpower[team] += power[other]
-        newpower[team]/=len(wins[team])+len(loss[team])
+        newpower[team]/=2*(len(wins[team])+len(loss[team]) + 2.0)
     power = newpower
 
 ranks = sorted([(power[i],i) for i in wins if len(wins[i])+len(loss[i])>4])
