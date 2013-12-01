@@ -33,7 +33,6 @@ for line in data.split('\n')[1:]:
             assert(hometeam==res[0] or hometeam == res[2])
             if datum[-1] == 'TEAM': games[gameid].append(hometeam)
             else: games[gameid].append(-1)
-        
 
 outp = open("data/games-parsed-week%s.txt"%(WEEKNUM,),"w")
 
